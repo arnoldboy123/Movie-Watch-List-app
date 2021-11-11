@@ -1,4 +1,7 @@
-<%= simple_form_for (@list) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
-<% end %>
+<div class="container mt-3">
+  <%= simple_form_for (@list) do |f| %>
+    <%= f.input :name, label_html: {class: "text-white"} %>
+    <%= f.submit "Submit review", class: "btn btn-light" %>
+  <% end %>
+  <%= link_to "back to main menu", lists_path, class: "btn btn-light mt-3" %>
+</div>

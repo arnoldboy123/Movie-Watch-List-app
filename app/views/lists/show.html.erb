@@ -1,12 +1,22 @@
-<h1><%= @list.name %></h1>
+<div class="container mt-3">
+  <h1><%= @list.name.upcase %></h1>
 
-<%= link_to "add a movie", new_list_bookmark_path(@list) %>
+  <div class="row">
+    <% @list.movies.each do |movie| %>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card mt-3 mb-3 bg-light text-dark">
+          <div class="card-header">
+            <h2><%= movie.title %></h2>
+          </div>
+          <div class="card-body">
+            <p><%= movie.overview %></p>
+            <p><%= movie.bookmarks.first.comment %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
-<div class="card">
-  <% @list.movies.each do |movie| %>
-    <h2><%= movie.title %></h2>
-    <p><%= movie.overview %></p>
-  <% end %>
+  <%= link_to "add a movie", new_list_bookmark_path(@list), class: "btn btn-light mt-3 mr-3" %>
+  <%= link_to "Back to main page", lists_path, class: "btn btn-light mt-3" %>
 </div>
-
-<%= link_to "Back to main page", lists_path%>
