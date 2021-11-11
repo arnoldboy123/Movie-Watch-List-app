@@ -1,0 +1,11 @@
+<div id="banner">
+</div>
+
+<h1>My list</h1>
+<%= link_to "create a new movie list", new_list_path %>
+
+<div class-"container">
+  <% @lists.each do |list| %>
+    <%= link_to "#{list.name}", list_path(list) %>
+  <% end %>
+</div>
