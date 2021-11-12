@@ -5,7 +5,7 @@
     <% @list.movies.each do |movie| %>
       <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="card mt-3 mb-3 bg-light text-dark">
-          <%= cl_image_tag movie.bookmarks.first.photo.key, style: "height: auto %>
+          <%= cl_image_tag movie.bookmarks.first.photo.key %>
           <div class="card-header">
             <h2><%= movie.title %></h2>
           </div>
