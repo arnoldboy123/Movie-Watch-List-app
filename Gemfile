@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 # API key encryption gem
 gem 'dotenv-rails', groups: [:development, :test]
 
+# Cloudinary
+gem 'cloudinary', '~> 1.16.0'
+
 # Front-end Gems
 gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 5.12.0"
